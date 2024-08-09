@@ -1,0 +1,130 @@
+        /* Configuração das fontes */
+        @font-face {
+            font-family: 'Vanilla';
+            src: url('/fonts/vanilla_whale/Vanilla Whale.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'NewsPaper';
+            src: url('/fonts/oldnewspapertypes/OldNewspaperTypes.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilização geral */
+        body {
+            background-image: url(/imagens/body-fundo.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'NewsPaper', sans-serif;
+            color: white;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Cabeçalho */
+        .cabeçalho {
+            background-color: rgb(116, 0, 0);
+            width: 100%;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cabeçalho-titulo {
+            max-width: 300px;
+        }
+
+        /* Introdução */
+        .section-introdução {
+            display: flex;
+            justify-content: center;
+            padding: 5rem 1rem;
+        }
+
+        .introdução {
+            max-width: 1000px;
+            background-color: rgba(116, 0, 0, 0.699);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .introdução-tx {
+            font-family: 'NewsPaper', sans-serif;
+            font-size: 1.5rem;
+        }
+
+        /* Conteúdo principal */
+        .section-principal {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding: 2rem 1rem;
+        }
+
+        .coluna-1, .coluna-2, .coluna-3 {
+            background-color: rgba(116, 0, 0, 0.664);
+            width: 100%;
+            max-width: 350px;
+            margin: 1rem;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .titulo-coluna-1, .titulo-coluna-2, .titulo-coluna-3 {
+            font-family: 'Vanilla', sans-serif;
+            font-size: 2.5rem;
+            color: rgb(255, 255, 255);
+            margin-top: 1rem;
+        }
+
+        /* Responsividade */
+        @media (min-width: 768px) {
+            .section-introdução {
+                padding: 5rem;
+            }
+
+            .introdução-tx {
+                font-size: 2rem;
+            }
+
+            .section-principal {
+                flex-wrap: nowrap;
+            }
+
+            .coluna-1, .coluna-2, .coluna-3 {
+                width: 30%;
+                margin: 0.5rem;
+            }
+
+            .titulo-coluna-1, .titulo-coluna-2, .titulo-coluna-3 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .introdução-tx {
+                font-size: 1.25rem;
+            }
+
+            .titulo-coluna-1, .titulo-coluna-2, .titulo-coluna-3 {
+                font-size: 2rem;
+            }
+        }
